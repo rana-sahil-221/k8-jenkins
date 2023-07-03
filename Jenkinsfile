@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Repo') {
       steps {
-        git branch:'main' url: 'https://github.com/rana-sahil-221/k8-jenkins.git'
+        git branch:'main',url: 'https://github.com/rana-sahil-221/k8-jenkins.git'
       }
     }
     stage('Building Image') {
