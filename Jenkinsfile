@@ -29,10 +29,11 @@ pipeline {
     }
     stage('Deploying the Application to the K8 Cluster') {
       steps {
-        script {
-          kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
-        }
+          sh 'kubectl apply -f deployment.yaml'
       }
+      steps {
+        sh 'kubectl apply -f service.yaml'
     }
   }
 }
+}  
