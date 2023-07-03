@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: jenkins-demo
-          image: kubesahil221/jenkins-demo:11
+          image: kubesahil221/k8-jenkins:latest
           ports:
             - containerPort: 8080
