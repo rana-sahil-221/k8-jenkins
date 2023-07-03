@@ -29,8 +29,8 @@ pipeline {
     }
     stage('Deploying the Application to the K8 Cluster') {
       steps {
-        sh 'kubectl --kubeconfig=/home/xs314-sahran/.kube/config apply -f /var/lib/jenkins/workspace/k8-jenkins/deployment.yaml'
-        sh 'kubectl --kubeconfig=/home/xs314-sahran/.kube/config apply -f /var/lib/jenkins/workspace/k8-jenkins service.yaml'
+        sh 'sudo kubectl --kubeconfig=/home/xs314-sahran/.kube/config apply -f /var/lib/jenkins/workspace/k8-jenkins/deployment.yaml'
+        sh 'sudo kubectl --kubeconfig=/home/xs314-sahran/.kube/config apply -f /var/lib/jenkins/workspace/k8-jenkins service.yaml'
     }
   }
 }
