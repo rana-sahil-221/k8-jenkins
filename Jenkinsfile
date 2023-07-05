@@ -3,7 +3,7 @@ pipeline {
     imagename = "kubesahil221/k8-jenkins"
     dockerImage = ""
     registryCredential = 'dockerhub_id'
-    KUBECONFIG = credentials('kube_id')
+    KUBECONFIG = credentials('kube_vagrant_id')
   }
   agent any
   stages {
