@@ -32,8 +32,8 @@ pipeline {
     }
     stage('Deploying the Application to the K8 Cluster') {
       steps {
-        sh 'sudo kubectl --kubeconfig=${KUBECONFIG} apply -f /var/lib/jenkins/workspace/k8-jenkins/deployment.yaml'
-        sh 'sudo kubectl --kubeconfig=${KUBECONFIG} apply -f /var/lib/jenkins/workspace/k8-jenkins/service.yaml'
+        sh 'sudo kubectl --kubeconfig=${KUBECONFIG} apply -f /opt/jenkins/workspace/jenkins-k8-node(vagrant)/deployment.yaml'
+        sh 'sudo kubectl --kubeconfig=${KUBECONFIG} apply -f /opt/jenkins/workspace/jenkins-k8-node(vagrant)/service.yaml'
     }
   }
 }
