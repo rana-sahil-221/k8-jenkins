@@ -5,11 +5,13 @@ pipeline {
     registryCredential = 'dockerhub_id'
     KUBECONFIG = credentials('kube_vagrant_id')
   }
-  agent any
+  agent {
+    labels: 'vagrant-vm'
+  }
   stages {
     stage('Cloning Repo') {
       steps {
-        git branch:'test',url: 'https://github.com/rana-sahil-221/k8-jenkins.git'
+        git branch:'main',url: 'https://github.com/rana-sahil-221/k8-jenkins.git'
       }
     }
     stage('Building Image') {
